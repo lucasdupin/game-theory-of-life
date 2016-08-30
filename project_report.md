@@ -1,6 +1,6 @@
 # Game Theory of Live
 ## Machine Learning Engineer Nanodegree
-Lucas Dupin  
+Lucas Dupin + Thomas Buffer 
 August 29th, 2016
 
 ## I. Definition
