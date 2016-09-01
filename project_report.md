@@ -21,10 +21,10 @@ These are examples of patterns that can be formed by the original game:
 
 ![Game of life](https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif)
 
-This project will breath fresh air into this problem. Also using a small set of rules, we are building a cell automata that isn't passive to its environment anymore, but learns how it behaves, just by living, and does what we do best: live and reproduce.
+This project will breath fresh air into this problem. Also using a small set of rules, we are building a cell automata that isn't passive to its environment anymore, but learns how it behaves, just by existing, and does what we do best: live and reproduce.
 
 ### Problem Statement
-It's clear that the Game of Live succeed in its goals of generating complex patters and emerging self organization, but it doesn't grasp the most intricate aspects of life, such as evolution and free will. It's complicate to say that a being will behave exactly the same over and over, without ever learning what hurts or pleases him.
+It's clear that the Game of Live succeed on its goals of generating complex patters and emerging self organization, but it doesn't grasp the most intricate aspects of life, such as evolution and free will. It's complicate to say that a being will behave exactly the same over and over, without ever learning what hurts or pleases him.
 
 Having this in mind, more existential problems were given. These are the rules that guide the life of a being:
 
@@ -51,17 +51,22 @@ This problem will be solved using **Reinforcement Learning** and **Game Theory**
 
 Each action results in an reward, negative or positive, depending on whether you ate, reproduced, were eaten or just aged.
 
-Since we are also targeting phones, memory usage is a concern, so real numbers will be grouped into bigger bins, to save precious RAM while also avoiding the **curse of dimensionality**.
+Since we are also targeting phones, memory usage is a concern, so real numbers will be grouped into bigger bins, to save precious RAM while also speeding up training.
 
 Over time, all beings will learn what to do to maximize their lifespan, and guarantee reproduction. This injects another dimension of intelligence into the original Game of Live.
 
 ### Metrics
-Besides being an art project, goals are well defined, not only by letting the piece evolve by itself, but also trying to mimic behaviors found in every life form.
+Besides being an art project, goals can be well defined, not only by letting the piece evolve by itself, but also by trying to mimic behaviors found in every life form.
 
-In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
-- _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
-- _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
+The main metrics we'll observe will be:
 
+* Cell score after death - based on rewards after each iteration
+* Lifespan - if it could age, died by starvation or were eaten
+* Capacity to reproduce - it's crucial for a species to be able to perpetuate
+
+It's expected that scores will be lower initially, since cells won't have learned yet that they have to eat and reproduce. And will increase over time, as cells evolve.
+
+There is one behavior that's still part of this research and won't be considered success or failure. This behavior is how far a cell can evolve and still keep the symbiosis of the environment.
 
 ## II. Analysis
 _(approx. 2-4 pages)_

@@ -1,30 +1,29 @@
+import java.util.List;
+
 class Simulation {
-  color c1 = color(random(255),random(255),random(255));
-  color c2 = color(random(255),random(255),random(255));
-  color c3 = color(random(255),random(255),random(255));
-  color c4 = color(random(255),random(255),random(255));
+  
+  private List<Worm> worms;
   
   public Simulation() {
-    
+    createWorms();
   }
   
+  public void createWorms() {
+    worms = new ArrayList<Worm>();
+    while (worms.size() < WORM_COUNT) {
+        worms.add(new Worm(null, null));
+    }
+  }
+
   public boolean ended() {
-    return false;
+    return worms.size() == 0;
   }
   
   public void draw() {
+    for (Worm worm : worms) {
+      worm.update();
+      worm.draw();
+    }
     strokeWeight(9);
-    
-    noFill();
-    strokeWeight(4);
-    beginShape();
-    stroke(c1);
-    vertex(20, 20);
-    stroke(c2);
-    vertex(80, 20);//, 50, 50);
-    //quadraticVertex(80, 20, 50, 50);
-    stroke(c3);
-    vertex(50, 50);
-    endShape();
   }
 }
