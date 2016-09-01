@@ -1,6 +1,7 @@
 # Game Theory of Live
 ## Machine Learning Engineer Nanodegree
-Lucas Dupin + Thomas Buffet 
+Concept and engineering: Lucas Dupin  
+Design: Thomas Buffet  
 August 29th, 2016
 
 ## I. Definition
