@@ -44,7 +44,7 @@ Minor assumptions made considering these rules:
 
 Actions that a being can execute:
 
-* Moving each leg to a chosen direction (top, right, bottom, left)
+* Move to a chosen direction (top, right, bottom, left, wait)
 * Eating
 * Reproducing
 
@@ -65,14 +65,23 @@ The main metrics we'll observe will be:
 * Lifespan - if it could age, died by starvation or were eaten
 * Capacity to reproduce - it's crucial for a species to be able to perpetuate
 
-It's expected that scores will be lower initially, since cells won't have learned yet that they have to eat and reproduce. And will increase over time, as cells evolve.
+It's expected that scores will be lower initially, since cells won't have learned yet that they have to eat and reproduce. And will increase over time, as cells evolve. They must learn how to eat and reproduce, and the best time do execute each action.
 
-There is one behavior that's still part of this research and won't be considered success or failure. This behavior is how far a cell can evolve and still keep the symbiosis of the environment.
+There is one behavior that's still part of this research and won't be considered success or failure. This behavior is how far a cell can evolve and still keep in symbiosis with the environment.
 
 ## II. Analysis
 _(approx. 2-4 pages)_
 
 ### Data Exploration
+
+Each cell/being will be able to analyze its surrounds and act based on that. These are the properties considered to be the state of each cell:
+
+* Age, in minutes to have a discrete set
+* Hunger, gauge that fills every time a cell eats
+* Closest food direction: up, right, bottom, left, none
+* Closest cell direction: up, right, bottom, left, none
+* Closest predator direction: up, right, bottom, left, none
+
 In this section, you will be expected to analyze the data you are using for the problem. This data can either be in the form of a dataset (or datasets), input data (or input files), or even an environment. The type of data should be thoroughly described and, if possible, have basic statistics and information presented (such as discussion of input features or defining characteristics about the input or environment). Any abnormalities or interesting qualities about the data that may need to be addressed have been identified (such as features that need to be transformed or the possibility of outliers). Questions to ask yourself when writing this section:
 - _If a dataset is present for this problem, have you thoroughly discussed certain features about the dataset? Has a data sample been provided to the reader?_
 - _If a dataset is present for this problem, are statistics about the dataset calculated and reported? Have any relevant results from this calculation been discussed?_
