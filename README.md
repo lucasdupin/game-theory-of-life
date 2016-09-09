@@ -19,7 +19,7 @@ It's clear that the Game of Live succeed on its goals of generating complex patt
 	![Preferences](https://github.com/lucasdupin/game_theory_of_life/blob/master/instructions/1_pref.png?raw=true)
 
 1. and change the Sketchbook location to the root of the repo:  
-	![Sketchbook location](https://github.com/lucasdupin/game_theory_of_life/blob/master/instructions/2_sketch.png?raw=true)
+	![Sketchbook location](https://github.com/lucasdupin/game_theory_of_life/blob/master/instructions/2_sketch.png?raw=true)  
 	This way you won't have to install all dependencies.
 
 1. Double click the main `pde` file.  
